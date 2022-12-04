@@ -1,0 +1,48 @@
+.eventos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    justify-content: center;
+}
+
+.eventos__item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto repeat(2 , 1fr) auto;
+    grid-template-areas:
+        "imagem imagem"
+        "nome nome"
+        "data data"
+        "local botao";
+    align-items: center;  
+}
+
+.imagem {
+    grid-area: imagem;
+}
+
+.nome {
+    grid-area: nome;
+}
+
+.data {
+    grid-area: data;
+}
+
+.local {
+    grid-area: local;
+}
+
+.botao {
+    grid-area: botao;
+    justify-self: end;
+   
+}
+
+@media (min-width: 720px) {
+    .eventos__lista {
+        justify-content: end;
+    }
+}
